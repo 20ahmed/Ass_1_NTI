@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-commerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>My Store</h1>
+    <div class="Filteration">
+      <div class="searchForProducts">
+        <input type="text" placeholder="Search for Products..." id="headerInput">
+      </div>
+      <div class="AllCategories">
+        <button class="dropbtn" id="AllCategories">All Categories</button>
+        <input type="number" id="minPriceInput" placeholder="Enter minimum price" style="margin-left: 10px;">
+        <button class="btn btn-primary" onclick="filterByMinPrice()">Filter by Minimum Price</button>
+        <button class="btn btn-primary" onclick="filterByMaxPrice()">Filter by Max Price</button>
+        <button class="btn btn-primary" id="Search">Search</button>
+      </div>
+    </div>
+  </div>
+  <!-- End of Header -->
+
+  <div id="dataDisplay" class="container">
+    <button class="btn btn-secondary" onclick="sortedFuncByCategory()">Sort by Category</button>
+    <button class="btn btn-secondary" onclick="sortedFunc()">Sort by Price</button>
+    <div class="row"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
